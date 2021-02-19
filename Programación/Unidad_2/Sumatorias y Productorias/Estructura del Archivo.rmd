@@ -1,0 +1,110 @@
+# Estructura del posible documento
+
++ Portada
+    + Título
+    + Nombre
+    + Nombre de la materia
+    + Nombre del Profesor
+    + Institución
+    + Logo UPV
++ Problema
+    + Planteamiento
+    + Diagrama de Flujo
+    + Pseudocódigo
++ Diagrama Final
++ Pseudocódigo Final
++ Conclusión
+  
+# main()
+
+    Module main()
+        Declare String option
+        Declare Integer k
+        Declare Integer n
+        Declare Integer f 
+        // Set option = "continue" 
+        Do 
+        Display "Opciones:"
+        Display "1: Sumatoria(n)"
+        Display "2: Sumatoria(n, fórmula"
+        Display "3: Sumatoria(k, n)"
+        Display "4: Productoria(n)"
+        Display "5: Productoria(k,n)"
+        Display "Salir"
+        Input option
+        Select option
+            Case 1:
+                Display "Ingresa n:"
+                Input n
+                Call sumatoriaLS(n)
+            Case 2:
+                Display "Ingresa n"
+                Input n
+                Display "Ingresa la fórmula"
+                Input f
+                Call sumatoriaConFormula(n)
+            Case 3:
+                Display "Ingresa k"
+                Input k
+                Display "Ingresa n"
+                Input n
+                Call summationLIS(k,n)
+            Case 4:
+                Display "Ingresa n"
+                Input n               
+                Call productoriaLS(n)
+            Case 5:
+                Display "Ingresa k"
+                Input k
+                Display "Ingresa n"
+                Input n
+                Call productoriaLS(k,n)
+            Case 6:
+            	Display "Adios!"
+            	Set option = 6
+        While option != 6
+    End Module
+    
+    Module sumatoriaLS(n)
+        Declare Real i
+        For x = 1 To n Step 1
+            i = i + x
+        End For
+        Display "i = ", i
+    End Module
+    
+    Module sumatoriaConFormula(n)
+        Declare Integer i
+        For x = 1 To n Step 1
+            i = i + (n*(n+1))/2
+        End For
+        Display "i = ", i
+    End Module       
+    
+    Module summationLIS(k, n)
+        Declare Real i 
+        For x = k To n Step 1
+            i = i + k
+        End For
+        Display "i = ", i
+    End Module          
+    
+    Module productoriaLS(n)
+        Declare Real i
+        // Hay que inicializar la variable 'i' con valor de 1 porque sino se multipliplicará siempre por 0.
+        Set i = 1 
+        For x = 1 To n Step 1
+            i = i * x
+        End For
+        Display "i = ", i
+    End Module                 
+    
+    Module productoriaLIS(k,n)
+        Declare Real i
+        // Hay que inicializar la variable 'i' con valor de 1 porque sino se multipliplicará siempre por 0.
+        Set i = 1
+        For x = k To n Step 1
+            i = i * x
+        End For
+        Display "i = ", i
+    End Module                        
